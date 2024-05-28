@@ -1,2 +1,2 @@
 # Portfolio django
-all projects will be there
+Portfolio => main => content here

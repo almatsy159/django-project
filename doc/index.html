@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.css">
+    </head>
+    <body>
+        {% url %} {{ url }}
+        <div class="card"><ul>
+            <li><a href="/doc/tag/">Tags</a></li>
+                <!--<li><a href="/">Root Site</a></li>-->
+                    <li><a herf="/doc/content/ ">Content</a></li>
+                    <li><a href="/doc/detail/">New doc</a></li>
+        </ul>
+            {% if doc_list %}
+                <ul> doc
+                {% for document in doc_list %}
+                    <!--<li><a href="">index</a> </li>-->
+                    
+                    <li><a href="{% url 'detail' document.id %}">{{ document.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No docs are available.</p>
+            {% endif %}
+            <div>
+            {% if tag_list %}
+                <ul>tag
+                    {% for tag in tag_list %}
+                    <li><a href="{% url 'tag' tag.id %}">{{tag.name}}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                No Tags
+            {% endif %}
+                <form method="post" >
+                    {% csrf_token %}
+                    <fieldset>
+    
+                        <legend>new tag</legend>
+                        <div>
+                            <label for="ftitle">Title :</label>
+                            <input type="text" id="ftitle" name="ftitle" placeholder="No Title">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="fcontent">Content :</label>
+                            <input type="text" id="fcontent" name="fcontent" placeholder="No Content">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="flink">Link :</label>
+                            <input type="link" id="flink" name="flink"> <!--value = -->
+                        </div>
+                        <br>
+                        <div>
+                            <input type="reset">
+                        </div>
+                        <div>
+                            <input type="submit" value="send">
+                        </div>
+                    </fieldset>
+                </form>
+    </div>
+        </div>
+    </body>
+</html>

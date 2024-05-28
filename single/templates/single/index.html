@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- this page is a model for template/single/index.html -->
+<html lang="fr">
+    <head>
+        <base href="">
+        <meta>
+        <link rel="stylesheet" href="">
+        <script href="main.js">
+
+    </head>
+    <body>
+        <header>
+            <nav></nav>
+            name,filter <form></form>
+            <!-- JS -->
+            <slot></slot>
+            <template></template>
+            <script></script>
+            <!-- END JS -->
+        </header>
+        <main>
+        <nav>
+            #usage nav ?
+        <nav>
+        <section>
+                <div>
+                    <hgroup>
+                        <summary>
+                            <h1> Index of Single</h1>
+                        </summary>
+                        <details>
+                            <p><i>A site with only one page, it's a prototype</i></p>
+                            <h2> Sommaire:</h2>
+                            <div>
+                                <!-- Head of main-->
+                                <h2>Info about site</h2>
+                                <p>{{ request }}{{ lists }}</p>
+                                <aside><!-- img --><a href="single/help.html">Help</a></aside>
+                            </div>
+                        </details>
+                    </hgroup>
+            
+                </div>
+                    <div>
+                    
+                    # pour chaque table correspondant au flitre (head) une liste et un champ par default 7? nombre 
+                    item afficher
+                    {% if lists %}
+                    <summary>
+                    lists: {{lists}}
+                    </summary>
+                    <details>
+                    <article>
+                        {% for l in lists %}
+                        <summary>
+                        l: {{l}}
+                        </summary>
+                        l :
+                        <details>
+                        <ul>
+                            {% for i in l%}
+                            <summary>
+                            i: {{i}}
+                            </summary>
+                            <details>
+                            i:
+                            <!-- for -->
+                            <li><p>{{ i.name }}</p>
+                                <slot></slot>
+                                <!-- here generic most complete item under two form (sump and and detail)-->
+                                <form></form>
+                                
+                                <summary> {{i.id}} : {{i.d_crea}}</summary>
+                                <details> {{i.content}} <br>   structure doc!</details>
+                                <dialog> dialog </dialog>
+                            </li>
+                        </details>
+                            {% endfor %}
+
+                        </ul>
+                    </details>
+                        {% endfor %}
+                    </article>
+                </details>
+                    {% else %}
+                    No list found ...
+                    {% endif %}
+                    {% if table %}
+                    table is defined
+                    {% else %}
+                    table is not defined
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <!-- enctype => mime enctype="application/x-www-form-urlencoded" method post get DIALOG _top _blank !!-->
+        <form action="" method="post" target="_self" >
+            {% csrf_token %}
+            <fieldset>
+            <legend>post form</legend>
+            <input type="text" name="name">
+            <!--<input type="submit">-->
+            <!-- <button type="submit" name="send" value="send"> -->
+            </fieldset>
+        </form>
+        <form action="" method="get">
+            <fieldset>
+                <legend>get form</legend>
+            <input type="text"name="my_text">
+            <input type="submit" name="submit" value="submit">
+            </fieldset>
+        <address></address>
+    </footer>
+
+    </body>
+
+</html>

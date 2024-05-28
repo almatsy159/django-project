@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>tag</title>
+        <meta charset="utf-8">
+        <link href="{% static 'style2.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="menu-tab">
+            <!----------------tableau-01---------------------------------->
+            <div id="page-wrap">
+                <div class="tabs">
+                    <!----------------onglet-01-accueil-------------------------->
+                    <div class="tab"><input id="tab-1" checked="checked" name="tab-group-1" type="radio" />
+                        <label for="tab-1">Accueil</label>
+                        <div class="content">
+                            <p><a href="#">Retour Acceuil</a></p>
+                            <p><a href="#">Contact</a></p>
+                            <p><a href="#">Newsletter</a></p>
+                        </div>
+                    </div>
+                    <!----------------onglet-02-articles-------------------------->
+                    <div class="tab"><input id="tab-2" name="tab-group-1" type="radio" /> <label for="tab-2">Articles</label>
+                        <div class="content">
+                            <p>Exemple, une image, du texte</p>
+                            <br />
+                            <p><img src="http://ekladata.com/UM-RXN_kZ3q93_FwWhFA15FP_uc.jpg" alt="" /></p>
+                        </div>
+                    </div>
+                    <!----------------onglet-03-forum-------------------------->
+                    <div class="tab"><input id="tab-3" name="tab-group-1" type="radio" /> <label for="tab-3">Forum</label>
+                        <div class="content">
+                            <p>Exemple, une image, et une video...</p>
+                            <br />
+                            <p><img src="http://ekladata.com/UM-RXN_kZ3q93_FwWhFA15FP_uc.jpg" alt="" /> <iframe style="margin-left: 30px; box-shadow: 6px 6px 10px grey;" src="https://player.vimeo.com/video/36778024" frameborder="0" width="500" height="281"></iframe></p>
+                        </div>
+                    </div>
+                    <!----------------onglet-04-libre-------------------------->
+                    <div class="tab"><input id="tab-4" name="tab-group-1" type="radio" /> <label for="tab-4">Video-1</label>
+                        <div class="content">
+                        <p>Une vid&eacute;o de Constance..!</p>
+                        <br /> <iframe src="//www.youtube.com/embed/LU2BQY_Doio?rel=0" frameborder="0" width="420" height="315" allowfullscreen="allowfullscreen"></iframe></div>
+                        </div>
+            <!----------------onglet-05-libre------------------------->
+                        <div class="tab"><input id="tab-5" name="tab-group-1" type="radio" /> <label for="tab-5">Video-2</label>
+                            <div class="content"><br /> <iframe src="//www.youtube.com/embed/I3W3mRs4ULQ?rel=0" frameborder="0" width="560" height="315" allowfullscreen="allowfullscreen"></iframe></div>
+                        </div>
+                    </div>
+    </body>
+</html>

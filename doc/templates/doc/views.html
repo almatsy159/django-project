@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>View:{{name}}</title>
+    </head>
+    <body>
+        <header>
+            <a href="/doc">doc</a>
+            <a href="/polls">polls</a>
+            <a href="/api">api</a>
+            <a href="/single">single</a>
+        </header>
+        <p>{{ url }}</p>
+        <a href="../">Previous level</a> 
+        <div class="card">
+            {% if doc_list %}
+            
+                <ul> doc :
+                    
+                {% for document in doc_list %}
+                    
+                    <li><a href="/doc/">{{ document.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No Documents</p>
+            {% endif %}
+            <form action = "{% url doc:tags doc.tag %}" method="post" >
+                {% csrf_token %}
+                <fieldset>
+
+                    <legend>new element :</legend>
+                    <div>
+                        <label for="ftitle">Title :</label>
+                        <input type="text" id="ftitle" name="ftitle" placeholder="No Title">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="fcontent">Content :</label>
+                        <input type="text" id="fcontent" name="fcontent" placeholder="No Content">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="flink">Link :</label>
+                        <input type="link" id="flink" name="flink"> <!--value = -->
+                    </div>
+                    <br>
+                    <div>
+                        <input type="reset">
+                    </div>
+                    <div>
+                        <input type="submit" value="send">
+                    </div>
+                </fieldset>
+            </form>
+</div>
+    </body>
+</html>

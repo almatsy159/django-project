@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <title>tag</title>
+    <meta charset="utf-8">
+    <body>
+        <p> {{ url }}
+            <a href="/doc">Home</a>
+            <a href="../">Previous level</a> 
+        <div><ul>
+            <li><a href="/doc/tag/">Tags</a></li>
+            <li><a href="/doc">Index</a></li>
+                <!--<li><a href="/">Root Site</a></li>-->
+                    <li><a herf="/doc/content/ ">Content</a></li>
+                    <li><a href="/doc/detail/">New doc</a></li>
+        </ul>
+        {{tag_list}}{{tag}}
+            {% if tag_list %}
+                <ul> tag
+                {% for tag in tag_list %}
+                    <!--<li><a href="">index</a> </li>-->
+                    <li><a href="{% url 'detail' tag.id %}">{{ tag.name }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No tags are available.</p>
+            {% endif %}
+            {% if tag %}
+                {{tag.group}}:{{tag.name}}
+            {% else %}
+            No tag
+            {% endif %}
+            <div>
+                <form target="self_" method="post" >
+                    {% csrf_token %}
+                    <fieldset>
+    
+                        <legend>new tag</legend>
+                        <div>
+                            <label for="fname">Name :</label>
+                            <input type="text" id="fname" name="fname" placeholder="No Name">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="fgroup">Group :</label>
+                            <input type="text" id="fgroup" name="fgroup" placeholder="No Group">
+                        </div>
+                        <br>
+                        <div>
+                            <input type="reset">
+                        </div>
+                        <div>
+                            <input type="submit" value="send">
+                        </div>
+                    </fieldset>
+                </form>
+    </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+/*.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+/* 
+
+Ma chere, y est tu arrivée ? La ou tu le desirais.
+mon ame ourdit le retour .et je suis la !
+et nous sommes deux etres, la mais loin de las et de l'etre, de chaire et d'amour,
+de mots,de lettres , des jours ephemeres et des mois court a tes cotés  
+ma cherie mon amour
+
+TU  
+ */
+.flexbox_row{
+    display: flex;
+    flex-direction: row;
+}*/
+a{
+    color: white
+}
+a:visited{
+    color : aqua
+}
+
+.container{
+    display: flex;
+}
+.row{
+    display: inline-flex;
+}
+.grid{
+    display:grid;
+}
+ul{
+    list-style: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../static/img/bg/star.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display:grid;
+    /*grid-template-areas: 50px 50px / 1fr 2fr 1fr;*/
+    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    color: rgba(255,255,255)
+}
+.header{
+    /*background: linear-gradient(0deg,rgba(0,0,255,0.2) 0%,rgba(0,0,125,0.3) 75%,rgba(0,0,50,0.9) 100%);*/
+    background: linear-gradient(180deg,rgba(140,40,225,0.2) 0%,rgba(100,150,255,0.4) 100%);
+    border: 1px solid rgba(70,140,200,0.3);
+    grid-row: 1;
+    grid-column: 1/10;
+}
+.main_header{
+    background-color: rgba(100,150,255,0.5);
+    grid-row: 2;
+    grid-column: 2/8;
+
+}
+.main{
+    display: flex;
+    background-color: rgba(140,40,225,0.5);
+    grid-row: 3/7;
+    grid-column: 2 / 7;
+}
+.main_footer{
+    background-color: rgba(6, 35, 97, 0.5);
+    grid-row: 7;
+    grid-column: 2 / 7;
+}
+.menu{
+    flex-direction: column;
+    /*background : linear-gradient(90deg,rgba(100,150,255,0.5) 0%,rgba(140,125,175,0.65) 75%,rgba(6, 35, 97, 0.8) 100%);*/
+    background-color: rgba(0,0,125,0.3);
+    grid-row:2/8;
+    grid-column: 1;
+    padding-right: 40px;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu ul{
+    background: rgba(180,50,225,0.1);
+    margin: 20px;
+}
+
+.right_panel{
+    background-color: rgba(50,140,250,0.1);
+    grid-row: 2/8;
+    grid-column: 8;
+}
+.footer{
+    /*background-color: aquamarine;*/
+    --default-angle-content-grad :180deg;
+    --initial-color-value-content: rgba(60, 60, 247, 0.2);
+    --final-color-value-content: rgba(2, 2, 54, 0.8);
+    --mid-color-value-content: rgba(6, 39, 187, 0.3);
+    --mid-value-content:25%;
+
+    --base-content-grad: linear-gradient(
+        var(--default-angle-content-grad),
+        var(--initial-color-value-content) 0%,
+        var(--mid-color-value-content) var(--mid-value-content),
+        var(--final-color-value-content) 100%);
+    background: var(--base-content-grad);
+    grid-row: 10;
+    grid-column: 1/12;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.content{
+    background-color: rgba(140,125,175,0.5);
+    flex-grow: 1;
+    display: grid;
+    float : right;
+    /*grid-column: 2/4;*/
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.header_item{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+}
+header:hover{
+    border-radius: 10px;
+}
+a:hover{
+    color:aqua;
+}
+/*
+a:hover{
+    color:rgba(233, 143, 221,0.9);
+}*/
+
+.h1{
+    justify-content: center;
+}
+/*
+.main_item{
+    border:5px;
+    margin : 30px;
+    padding: 10px;*/
+
+    /*flex-grow: 1;*/
+main{
+    flex-direction: row;
+    background-color: rgba(100,150,255,0.5);
+}
+
+main li{
+    list-style: none;
+}
+main div:hover{
+    border-radius: 10px;
+}
+div:hover{
+    color : rgba(233, 143, 221,0.9);
+}
+.menu:hover{
+    color: yellow;
+}
+
+.content:hover{
+    color:rgba(14, 202, 202, 0.9);
+}
+
+.line{
+    display: inline-flexbox;
+}
+
+input[type="submit"]:hover{
+    border-color: rgba(182, 18, 182, 0.3);
+}
+.item{
+    background: rgba(70,140,200,0.3);
+    /*border: 3px solid rgba(6, 35, 97, 0.9);*/
+    margin : 1px;
+}
+
+.item:hover{
+    background :rgba(163, 34, 12, 0.4);
+    /*border:1px dashed rgba(163,34,12,0.8);*/
+}
+.title{
+    margin:20px;
+    flex-grow:14;
+}
+.square{
+    flex-grow: 1;
+    align-self:center;
+    justify-content: space-around;
+}
+.square ul{
+    align-self: center;
+    padding-right: 20px;
+}
+
+.doc_list{
+    /*border: 2px solid red;*/
+    background-color: rgba(6, 35, 67, 0.3);
+    border: 1px solid rgba(6, 35, 67, 0.5);
+    padding-right: 40px;
+}
+.doc_list:hover{
+    color:rgba(163,34,12,0.8);
+}
+.banner{
+    margin-bottom: 20px;
+    width: 1250px;
+    height : 250px;
+    background-image: url("../static/img/perso/banner_crop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    align-content: space-around;
+}

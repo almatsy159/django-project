@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function getURL() {
+                alert("The URL of this page is: " + window.location.href);
+            }
+            </script>
+            <button type="button" onclick="getURL();">Get Page URL</button>
+        <form>
+            <input type="text">
+            <input type="checkbox">
+            <input type="button">
+            <input type="submit" id="i_sub" name="i_sub">
+            <label for="i_sub">i_sub</label>
+            <select name="lang" id="lang" size="2" multiple>
+                <option value="fr">fr</option>
+                <option value="en">en</option>
+            </select>
+            <textarea name="ta" id="ta" cols="30" rows="10" placeholder="here ta" style="width:200px;height:300px;">the cat is somewhere</textarea>
+            <button type="button" onclick="alert(hi)">btn hi</button>
+            <fieldset>fieldset
+            <legend>here the legend</legend>
+            <input name="iname" type="text">
+            <label for="iname">iname label</label>
+            <datalist>
+                <option value="x">x</option>
+                <option value="y">y</option>
+                <option value="z">z</option>
+            </datalist>
+            <output></output>
+        </form>
+        
+    </body>
+</html>

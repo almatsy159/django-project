@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>{{name}}</title>
+        <link href="{% static '/style2.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {#{% extends "/doc/header.html" %}#}
+        <div><!--
+            <script>
+                function getURL() {
+                    alert("The URL of this page is: " + window.location.href);
+                }
+                </script>
+                <input type="button" id ="url_b">-->
+            <a href="/doc">Home</a>
+            <a href="../">Previous level</a> 
+            {% if document %}
+            <h1>{{ document.title }} : {{ document.date }}</h1>
+            <p> {{ document.id }} : <a href="{{document.link}}">{{document.link}}</a></p>
+                <ul>
+                    {% if tags %}
+                        {% for t in tags %}
+                            <li><a href="/tag/{{t.id}}" >{{t.name}}</a></li>
+                        {% endfor %}
+                    {% else %}
+                    No tag found for doc id = {{document.id}}
+                    {% endif %}
+                    
+                </ul>
+            {% else %}
+                {% if document_list %}
+                <h1>Name</h1>
+                    {% for doc in document_list %}
+                    <li><a href="{% url 'detail' doc.id %}">{{doc.title}}</a>{{doc.link}}</li>
+                    {% endfor %}
+                {% else %}
+                No document list !!! (and no document !!)
+                {% endif %}
+            <p> No Id. </p>
+            {% endif %}
+            <div>
+                {% if document %}
+                <form method="post" action="{% url 'detail' document.id %}">
+                {% else %}
+                <form method="post" action="{% url 'detail' %}">
+                {%endif%}
+                    {#<!--<form method="post" action="{% url 'detail' document.id %}">-->#}
+                    {% csrf_token %}
+                    <fieldset>
+
+                        <legend>new doc</legend>
+                        <div>
+                            <label for="ftitle">Title :</label>
+                            <input type="text" id="ftitle" name="ftitle" placeholder="No Title">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="fcontent">Content :</label>
+                            <input type="text" id="fcontent" name="fcontent" placeholder="No Content">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="flink">Link :</label>
+                            <input type="link" id="flink" name="flink"> <!--value = -->
+                        </div>
+                        <br>
+                        <div>
+                            <input type="reset">
+                        </div>
+                        <div>
+                            <input type="submit" value="send">
+                        </div>
+                    </fieldset>
+                </form>
+                {%if document %}
+                <form method="post" action="{% url 'detail' document.id %}" >
+                {% else %}
+                <form method="post" action="{% url 'detail' %}">
+                {% endif %}
+                    {% csrf_token %}
+                    <fieldset>
+
+                        <legend>new tag</legend>
+                        <div>
+                            <label for="fname">Label :</label>
+                            <input type="text" id="fname" name="fname" placeholder="No Name">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="fgroup">Group :</label>
+                            <input type="text" id="fgroup" name="fgroup" placeholder="No Group">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="fdid">Doc id :</label>
+                            <input type="text" id="fdid" name="fdid" value="{{document.id}}"> <!--value = -->
+                        </div>
+                        <br>
+                        <div>
+                            <input type="reset">
+                        </div>
+                        <div>
+                            <!--<input type="submit" value="send" id="create_tag">-->
+                            <input type="submit" value="create" id="create">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

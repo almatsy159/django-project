@@ -1,0 +1,148 @@
+{% extends "doc/others_extend.html" %}
+{% block title %}
+    Other
+{% endblock %}
+
+{% block header %}
+<header>
+    <nav class="navbar row">
+        <ul class="row">
+            <div class="col-md-2 grad0">
+                <nav class="nav-col">
+                    <div>
+                        <summary>Navigation Interne</summary>
+                        <details>
+                        <div class="card">
+                            <ul>
+                            <li>home logo ... #vers "/{{title}} <a href="/doc">Index</a>"</li> 
+                            <li><a href="/doc/second">Second</li>
+                            <li><a href="/doc/others">Others</li>
+                            <li><a href="/doc/tag/">Tags</a></li>
+                            <!--<li><a href="/">Root Site</a></li>-->
+                            <li><a href="/doc/detail/">New doc</a></li>
+                            </ul>         
+                        </div>
+                        </details>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-5 grad0">
+                <hgroup class="row">
+                <div class="col">
+                <h1 class="no" id="h1">Title</h1>
+                </div>
+                <div class="col">
+                <h2>Subtitle</h2>
+                <p class>desc</p>
+                </div>
+                <hgroup>
+            </div>
+            <div class="col-md-1 grad0">
+                1
+            </div>
+            <div class="col-md-2 grad0">
+                2
+            </div>
+            <div class="col-md-2 grad0">
+                <div>
+                    <nav class="nav-col">
+                        <div>
+                            <summary>Navigation Externe</summary>
+                            <details>
+                                <div class="card">
+                                <ul>other sites
+                                    #if not title!
+                                    <li>single</li>
+                                    <li>doc</li>
+                                    <li>polls #lien avec description</li>
+                                </ul>
+                            </div>
+                            </details>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            
+        </ul>
+    </nav>
+</header>
+    {#<!--{% include '/doc/header.html' %}-->#}
+{% endblock %}
+
+{% block liste %}
+<div>
+    <summary>
+    <h2>listname</h2>
+    </summary>
+    <details>
+    <ul>
+    {% for i in liste %}
+    <li class="card grad3" >
+        <h3 class="card-title">name :{{ i.name }}</h2>
+        <p>p : {{ i.body }}</p>
+    </li>
+
+    {% endfor %}
+</ul>
+</details>
+</div>
+{% endblock %}
+
+{% block fiche %}
+<div class="card grad3">
+<summary>
+    <h2>fiche.title</h2>
+</summary>
+<details>
+    <ul>
+    <div class=card>
+    {% for ci in fiche %}
+        <li> {{ci}}</li>
+    {% endfor %}
+    </div>
+</ul>
+</details>
+</div>
+{% endblock %}
+
+{% block fct_try %}
+res:{{get_form}}
+{% endblock %}
+
+{% block page %}
+    here page
+    <div>here page div</div>
+    {{get_form}}
+{% endblock %}
+
+{% block form_fiche %}
+    here fiche
+    {{form_fiche}}
+    {% for k,v in form_fiche.items %}
+        key: {{k}} et val: {{v}}
+    {% endfor %}
+{% endblock %}
+
+{% block form_list %}
+    here liste
+    {{form_list}}
+    {% for k,v in form_list.items %}
+        key: {{k}} et val: {{v}}
+    {% endfor %}
+{% endblock %}
+
+{% block menu %}
+<div class="card grad2">
+    <ul><h2>Menu</h2>
+    {% for k,v in menu.items %}
+        {% for i in v %}
+            <li>i:{{i}}</li>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+{% block right %}
+2
+{% endblock %}

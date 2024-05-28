@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Site of Gaetan Lecomte. It contain some of my IT works and is still in developement.
+            It's purpose is to help me get a job as an apprentice. Still looking for a company.">
+        {% load static %}
+        {% if title %}
+            <title>Generated : {{title}}</title>
+        {% else %}
+            <title>Index</title>
+        {% endif %}
+        <!--<link href="{% static '/doc/bootstrap.css' %}" rel="stylesheet">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'img/perso/LG.ico'%}" type="image/x-icon">
+        <link href="{% static 'index.css' %}" rel="stylesheet">
+        <link href="{% static 'style2.css' %}" rel="stylesheet">
+    </head>
+    <body class="grid">
+        <header class="header container">
+            {% block header %}
+            {% endblock %}
+        </header>
+
+        <div class="container menu">
+            
+            <ul>Autres Pages
+                <!--<li class="item">home logo ... #vers "/$title"</li> -->
+                <li class="item"><a href="/doc/second">Second</li>
+                <li class="item"><a href="/doc/others">Others</li>
+                <!--
+                <li><a href="/doc/tag/">Tags</a></li>
+                <li><a href="/doc">Index</a></li>
+                <li><a href="/">Root Site</a></li>-->
+                <li class="item"><a herf="/doc/content/ ">Content</a></li>
+                <li class="item"><a href="/doc/detail/">New doc</a></li>
+                <li class="item"><a href="others">Others</a></li>
+                <li class="item"><a href="../">Previous level</a></li>
+            </ul>
+        </div>
+
+        <div class="main_header">
+            main header here Dpcument : filters tags / name /word ... 
+            {% block main_header %}
+            {% endblock %}
+            end mainheader
+        </div>
+        <div class="main">
+            <p>beg main
+                <input type="button" name="name" value="value">
+            </p>
+                <div class="container main_item content">
+                    
+                    <div class="row">
+                        {% block default_doc %}
+                        {% endblock %}
+                    </div>
+                </div>
+            <p>end main</p>
+            <input type="button" name="name" value="value">
+        </div>
+
+        <div class="right_panel">
+            here right panel : liste of doc (fltered)
+            {% block right_panel %}
+            {% endblock %}
+        </div>
+
+        <div class="main_footer">
+            main footer here : form doc new doc and modif on doc .
+            {% block main_footer %}
+            {% endblock %}
+        </div>
+
+        <footer class="footer">
+            {%block footer%}
+            {% endblock %}
+        </footer>
+    </body>
+</html>

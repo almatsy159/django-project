@@ -1,0 +1,73 @@
+!<!DOCTYPE html>
+<!-- this page is a model for template/single/index.html -->
+<html lang="fr">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!--<base href=""><meta>
+        <link rel="stylesheet" href="./static/bootstrap.css">
+        -->
+        {% load static %}
+        <link href="{% static 'bootstrap.css' %}" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            {{ url }}
+            <nav class="navbar"></nav>
+            name,filter <form></form>
+            <!-- JS -->
+            <slot></slot>
+            <template></template>
+            <script></script>
+            <!-- END JS -->
+        </header>
+        <main>
+        <nav>
+            #usage nav ?
+        <nav>
+        <section>
+                <div>
+                <hgroup>
+                <h1> Index of Single</h1>
+                <p><i>A site with only one page, it's a prototype</i></p>
+                <h2> Sommaire:</h2>
+
+                </hgroup>
+                <div>
+                    <div>
+                        <!-- Head of main-->
+                    <h2>Info about site</h2>
+                    <aside><!-- img --><a href="single/help.html">Help</a></aside>
+                    # pour chaque table correspondant au flitre (head) une liste et un champ par default 7? nombre 
+                    item afficher
+                    <article>
+                        <ul>
+                            <!-- for -->
+                            <li>
+                                <slot></slot>
+                                <!-- here generic most complete item under two form (sump and and detail)-->
+                                <form></form>
+                                
+                                <summary> name</summary>
+                                <details> name : <br>   structure doc!</details>
+                                <dialog> dialog </dialog>
+                            </li>
+
+                        </ul>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <address></address>
+    </footer>
+
+    </body>
+
+</html>

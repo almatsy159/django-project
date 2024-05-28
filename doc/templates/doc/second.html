@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>Second {{url}} </title>
+        <link href="{% static 'second.css' %}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            console.log(document);
+            var pageWeb = document.getElementById("tryp");
+            if (pageWeb){
+                pageWeb.innerHTML = "hi world";
+            }
+            else{
+                console.log(pageWeb)
+            }
+        </script>
+    </head>
+    <body>
+        {{ header }}
+        <main>
+            <p>this page is made for html, css and js tests : {{path}}</p>
+            <ul>info
+            {% for i in info %}
+            <li>{{i}}</li>
+            {% endfor %}
+            </ul>
+            <ul>args
+                {% for a in args %}
+                <li>{{a}}</li>
+                {% endfor %}
+                </ul>
+        </main>
+        <div>
+            <img id="tryp" class="tryp" src="/static/img/art/1.jpg">
+            <p id="tryp" class="tryp">Here is a button</p>
+            <input type="button" value="value" name="name">
+        </div>
+        <div class="circle">
+    </body>

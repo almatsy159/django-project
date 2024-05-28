@@ -1,0 +1,16 @@
+.tryp{
+    transition: 1s;
+}
+.tryp:hover{
+    rotate:90px;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+.triangle{
+    width:50px;
+}

@@ -1,0 +1,8 @@
+python :
+    socket, scrapy,cgi,httpd,asyncio
+    numpy,panda,mathplotlib
+    pyqt ,tkinter, opencv, pil, pygame
+    re, math, os, sys
+    csv,json
+    mysql,mongodb 
+    anaconda,atom,idle,jupyter

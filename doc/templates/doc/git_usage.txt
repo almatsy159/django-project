@@ -1,0 +1,6 @@
+
+command:
+pull push
+
+git action :
+    yml

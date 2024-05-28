@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static '/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="card grad0" id="header">
+            {% block header %}
+            {% endblock %}
+        </div>
+        <div class="page grad2">
+                <nav>
+                    {% block menu %}
+                    {% endblock %}
+                </nav>
+                <!--</div>-->
+                <main class="card col col-md-8">
+                    <div class="card_and_list">
+                        {#here load : {% load get_form %}#}
+                        <div class="main_header row grad0">
+                            <div class="row">
+                                header top
+                            </div>
+                            <nav class="row grad0">
+                                <div class="col-md-3">
+                                    <div>
+                                        left
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        center
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div>
+                                        right
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="row grad0">
+                                <p id="p0"></p>
+                                header foot
+                                <script>let para = document.querySelector("p");
+                                    para.addEventListener("click", updateName);
+                                    function updateName() {
+                                        let name = prompt("Enter a new name");
+                                        para.textContent = "Player 1: " + name;
+                                    }
+                                </script>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                        <div class="card grad0" id="card">
+                        {% block fiche %}
+                        {% endblock %}
+                        </div>
+                        <div class="card grad0" id="list">
+                        {% block liste %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                    <div class="card grad0">
+                        <div class="card_only card grad0">
+                            {% block form_fiche %}
+                            {% endblock %}
+                            .fiche
+                        </div>
+                        <div class="list_only card grad0">
+                            {% block form_list %}
+                            {% endblock %}
+                            .list
+                            <div class="content card grad0">
+                                .content
+                                {% block fct_try %}
+                                {% endblock %}
+                                <br>
+                                {% block page %}
+                                {% endblock %}
+                                <div>
+                                    here div
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="grad2">
+                    {% block right%}
+                    {% endblock %}
+                </div>
+                <div class="grad4">
+                    <nav>
+                        <div>
+                            2
+                        </div>
+                        <div>
+                            foot main
+                        </div>
+                        <div>
+                            2
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer class="grad4">
+            <nav>
+                <div>
+                    2 foot page
+                </div>
+                <div>
+                    7
+                </div>
+                <div>
+                    2
+                </div>
+            </nav>
+        </footer>
+    </body>
+
+</html>

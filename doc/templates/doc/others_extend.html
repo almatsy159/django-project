@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static '/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="card grad0" id="header">
+            {% block header %}
+            {% endblock %}
+        </div>
+        <div class="navbar page grad2">
+            <!--<div class="col col-md-3">-->
+                <nav class="col col-md-2">
+                    <!--<div class="col card">
+                        <div class="card">
+                        {#{% include "/doc/header.html" %}#}
+                        others_extend.html body
+                        <ul>
+                            <li>My link or item or ..</li>
+                        </ul>
+                        </div>
+                        <div class="card">
+                            other
+                        </div>
+                        <div>
+                            <p>hello<p>
+                        </div>
+                    </div>-->
+                    {% block menu %}
+                    {% endblock %}
+                </nav>
+                <!--</div>-->
+                <main class="card col col-md-8">
+                    <div class="card_and_list">
+                        {#here load : {% load get_form %}#}
+                        <div class="main_header row grad0">
+                            <div class="row">
+                                header top
+                            </div>
+                            <nav class="row grad0">
+                                <div class="col-md-3">
+                                    <div>
+                                        left
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        center
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div>
+                                        right
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="row grad0">
+                                <p id="p0"></p>
+                                header foot
+                                <script>let para = document.querySelector("p");
+                                    para.addEventListener("click", updateName);
+                                    function updateName() {
+                                        let name = prompt("Enter a new name");
+                                        para.textContent = "Player 1: " + name;
+                                    }
+                                </script>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                        <div class="card grad0" id="card">
+                        {% block fiche %}
+                        {% endblock %}
+                        </div>
+                        <div class="card grad0" id="list">
+                        {% block liste %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                    <div class="card grad0">
+                        <div class="card_only card grad0">
+                            {% block form_fiche %}
+                            {% endblock %}
+                            .fiche
+                        </div>
+                        <div class="list_only card grad0">
+                            {% block form_list %}
+                            {% endblock %}
+                            .list
+                            <div class="content card grad0">
+                                .content
+                                {% block fct_try %}
+                                {% endblock %}
+                                <br>
+                                {% block page %}
+                                {% endblock %}
+                                <div>
+                                    here div
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="col col-md-2 grad2">
+                    {% block right%}
+                    {% endblock %}
+                    <!--<div>head</div>
+                        <div class="card">
+                    1       card
+                        </div>
+                        <div>
+                            foot right
+                        </div>-->
+                </div>
+                <div class="col col-md-12 grad4">
+                    <nav class="navbar footer_bar">
+                        <div class="nav-col col-md-2">
+                            2
+                        </div>
+                        <div class="nav-col col-md-8">
+                            foot main
+                        </div>
+                        <div class="nav-col col-md-2">
+                            2
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer class="card grad4">
+            <nav class="navbar">
+                <div class="col col-md-2">
+                    2 foot page
+                </div>
+                <div class="col col-md-7">
+                    7
+                </div>
+                <div class="col col-md-2">
+                    2
+                </div>
+            </nav>
+        </footer>
+    </body>
+
+</html>

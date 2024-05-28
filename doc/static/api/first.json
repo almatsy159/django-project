@@ -1,0 +1,31 @@
+{
+    "owner":
+    {
+        "id":{
+        "firstName":"gaëtan",
+        "surname":"lecomte",
+        "favouriteSkills": 
+            [
+                "python",
+                "linux"
+            ],
+        "card":
+            {
+                "github":"https://github.com/almatsy159",
+                "linkedin":"www.linkedin.com/in/glecomte159",
+                "site":"www.glecomte159.fr",
+                "projects":"https://github.com/almatsy159/projects.git"
+            },
+        "ytChannels":
+            {
+                "Tech With Tim":"https://www.youtube.com/c/techwithtim",
+                "Codemy.com":"https://www.youtube.com/@Codemycom",
+                "Indently":"https://www.youtube.com/@Indently",
+                "grafikart":"https://www.youtube.com/@grafikart",
+                "formationVideo":"https://www.youtube.com/@formation-video",
+                "NetWorkChuck":"https://www.youtube.com/@NetworkChuck"
+            }
+        
+        }
+    }
+}

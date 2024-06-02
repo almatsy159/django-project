@@ -23,6 +23,11 @@
         </header>
 
         <div class="container menu">
+            <ul>About
+                <li class="item">Auteur du site</li>
+                <li class="item">Centre de formation</li>
+                <li class="item">My Projects</li>
+            </ul>
             
             <ul>Autres Pages
                 <!--<li class="item">home logo ... #vers "/$title"</li> -->
@@ -40,34 +45,32 @@
         </div>
 
         <div class="main_header">
-            main header here Dpcument : filters tags / name /word ... 
+            main header here Document : filters tags / name /word ... 
             {% block main_header %}
             {% endblock %}
-            end mainheader
         </div>
         <div class="main">
-            <p>beg main
-                <input type="button" name="name" value="value">
-            </p>
+            <div class="bprevd">
+                <input class="bprev" type="button" name="name" value="value">
+        </div>
                 <div class="container main_item content">
                     
-                    <div class="row">
+                    <div class="row mainrow">
                         {% block default_doc %}
                         {% endblock %}
                     </div>
                 </div>
-            <p>end main</p>
-            <input type="button" name="name" value="value">
+            <div class="bnextd">
+            <input class="bnext"type="button" name="name" value="value">
+            </div>
         </div>
 
         <div class="right_panel">
-            here right panel : liste of doc (fltered)
             {% block right_panel %}
             {% endblock %}
         </div>
 
         <div class="main_footer">
-            main footer here : form doc new doc and modif on doc .
             {% block main_footer %}
             {% endblock %}
         </div>

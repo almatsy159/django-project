@@ -4,7 +4,7 @@
 {% block header %}
     
         <div class="square header_item">
-            <img src="/static/img/perso/LG.png">
+            <img class="prf" src="/static/img/perso/miamor.jpg" width="250" height="200">
             <!--
             <summary class="card-title">Navigation Interne</summary>
             <details class="card-body"> -->
@@ -19,24 +19,17 @@
                 <!--<img src="/static/img/perso/banner.png" alt="img not found" width="1250" height="300">-->
                 </div>
             </div>
-            -
         </div>
-        <div class="square header_item">
+        <div class="links header_item">
             <!--<img class="item" src="/static/img/perso/contact.png" width='125',height='125'/>-->
             <!--<summary class="card-title">Navigation Externe</summary>
-            <details class="card-body">--><ul>Autres Sites
-                #if not title!
+            <details class="card-body">--><ul class="linkbox"><h2>Liens</h2>
                 <!--<li class="item"><a href="/single">Single</a></li>-->
                 <!--<li class="item"><a href="/polls">polls #lien avec description</a></li>-->
-                <li class="item"><a href="https://linktr.ee/glecomte159" target="_blank">linktree</a></li>
-                <li class="item"><a href="https://www.linkedin.com/in/glecomte159/" target="_blank">lindkedin</a></li>
-                <li class="item"><a href="https://github.com/almatsy159" target="_blank">github</a></li>
-                <li class="item"><a href="mailto:gaetan.lecomte159@gmail.com">mail :gaetan.lecomte159@gmail.com</a></li>
-                </ul>
-                <ul>About
-                    <li class="item">Auteur du site</li>
-                    <li class="item">Centre de formation</li>
-                    <li class="item">My Projects</li>
+                <li class="item"><a class="lkt" href="https://linktr.ee/glecomte159" target="_blank"><img src="/static/img/logo/lkt.png" width="75" height="75"></a></li>
+                <li class="item"><a href="https://www.linkedin.com/in/glecomte159/" target="_blank"><img src="/static/img/logo/lkd.png" width="75" height="75"></a></li>
+                <li class="item"><a href="https://github.com/almatsy159" target="_blank"><img src="/static/img/logo/gh.png" width="75" height="75"></a></li>
+                <li class="item"><a href="mailto:gaetan.lecomte159@gmail.com"><img src="/static/img/logo/gm.png" width="75" height="75"></a></li>
                 </ul>
             
         </div>
@@ -151,19 +144,22 @@
 
 {% block footer %}
 
-<div>
-    <p id="0">args : {{args}}</p>
+<div class="f1">
+    <!--<p id="0">args : {{args}}</p>-->
     <img src="/static/img/perso/LG.png" width="150" height="150">
-</div>
-<div>
-    <p>lien vers mon linktree !
-    <img src="/static/img/perso/linktree_gl.png" width="150" height="150">
+    <div class="ibf">
+    <img class="lkt" src="/static/img/logo/lkt.png" width="150" height="75" alt="lien vers mon linktree !">
+    </div>
+</div class="f2">
+<div class="row rfoot">
+    
+    <img class="qrkt" src="/static/img/perso/linktree_gl.png" width="150" height="150">
 </div>
 {% endblock %}
 
 
 {% block default_doc %}
-<div>
+<div class="doc">
     <h1>Projet : Creation de site WEB avec Django</h1> 
         <p>Une description détaillée de la création du site et du contexte lié à ma formation chez simplon</p>
             <h2>Objectif du projet</h2>
@@ -175,9 +171,7 @@
                     augmenter mon employabilité
                 </p>
                 <h3>Améliorer et Demontrer mes Compétences</h3>
-
                     <p> html | css : 2010 <p>
-
                     <!--<p>Lors de mes début en programmation en html et css vers 2010, apres une formation informatique scolaire,<br>
                         j'etais face à de nombreuses difficultés</p>-->
                     
@@ -188,48 +182,55 @@
                             <li>Machine</li>
                             <li>Programme</li>
                             <li>Organisation</li>
-                            </p></ul>
+                            </ul></p>
                         <h4>conclusion : continuer a s'interesser au sujet</h4>
                 <h3>Historique</h3>
                         <h4>HTML CSS</h4>
                         <h4>C / C++</h4>
-                        4eme-premiere : Bureautique VBA Techno
+                        <p>4eme-premiere : Bureautique VBA Techno</p>
                         <h4>Python</h4>
-                            Terminale S
+                            <p>Terminale S</p>
                         <h4>BTS</h4>
-                            CAO DAO procédé industriel Art Appliqué  Rpi Arduino Linux Réseaux Mathématique
+                            <p>CAO DAO procédé industriel Art Appliqué  Rpi Arduino Linux Réseaux Mathématique</p>
                         <h4>ADAI</h4>
-                        Analyste Developpeur d'Application Informatique 
-                        SQL PHP JAVA Linux AS400 JS Sécurité...
+                        <p>Analyste Developpeur d'Application Informatique 
+                        SQL PHP JAVA Linux AS400 JS Sécurité...</p>
                         <h4>Hardis Group</h4>
+                        <p>
                         Adelia Reflex vm keypass bonne pratique inteface ...
+                        </p>
                         <h4>CDA</h4>
+                        <p>
                         Concepteur Devellopeur d'Application
+                        cf pre rentrée (en bas) ancre
+                        </p>
 
                 <h3>Améliorer et maintenir mes compétences</h3>
                     <h4>Technologie WEB<h4>
+                        <p>Mozila </p>
                     <h4>CSS HTML JS</h4>
+                        
                     <h4>Django</h4>
                     <h4>Deploiement</h4>
 
                 
                 <h3>Projet en cours</h3>
                     <h4>Integration programmes existant</h4>
-                        
+                        <p>Integration des projets existant a github et relire le code , formatage des commentaires , annoter les tests, decrire projet....</p>
 
                 <h4>Avoir un outils<h4> 
                     <p>pour continuer mon auto formation, me tenir informer et servir de base pour d'autres projets</p>
             <h2>RoadMap</h2>
-    
+                    
             <h3>Devellopeur</h3>
             <h3>Devellopeur Web</h3>
-    
+
             <h2>Pré-Rentrée Simplon</h2>
-                <h3>Entretiens</h3>
-                <h3>CV</h3>
-                <h3>Atelier Alternance</h3>
-                <h3>Exercices</h3>
-                <h3>Atelier Technique</h3>
+                <h3>Employabilité</h3>
+                <h3>CSS GAME</h3>
+                <h3>This Project</h3>
+                <h3>Portfolio</h3>
+                <h3>github</h3>
         </details>
         <summary>
             <h2>Web</h2>
@@ -238,19 +239,19 @@
             detail Web ...
         </details>
         <summary>
-            <h2>HTML</h2>
+            <h3>HTML</h3>
         </summary>
         <details>
-            <h3>Semantique et regle de l'art</h3>
-            <h3>Structure</h3>
-            <h3>Head</h3>
-            <h3>Body</h3>
-            <h3>Form</h3>
-            <h3>Interaction et Navigation</h3>
-            <h3>Sythese / Recap</h3>
+            <h4>Semantique et regle de l'art</h4>
+            <h4>Structure</h4>
+            <h4>Head</h4>
+            <h4>Body</h4>
+            <h4>Form</h4>
+            <h4>Interaction et Navigation</h4>
+            <h4>Sythese / Recap</h4>
         </details>
         <summary>
-            <h2>CSS</h2>
+            <h3>CSS</h3>
         </summary>
         <details>
             <summary>
@@ -263,20 +264,12 @@
                 <h4>Declaration</h4>
                     <p>Propriete : Valeur</p>
             </details>
-    
             <h3>Position</h3>
             <h3>Background</h3>
             <h3>Border</h3>
             <h3>Font</h3>
             <h3>Animation</h3>
             <h3>Framework</h3>
-
-        </details>
-    <summary>
-    <h2>Python</h2>
-</summary>
-<details>
-        <h3>Intro / Prérequis</h3>
         </details>
     <summary>
     <h2>Django</h2>
@@ -284,6 +277,8 @@
 <details>
         <h3>Intro</h3>
         <h3>Didactitiel</h3>
+        <h3>Script</h3>
+        <h4>Wsgi</h4>
 </details>
     <h2>Conception du site</h2>
         <h3>Generalité</h3>
@@ -296,8 +291,7 @@
         <h3>Accessibilité</h3>
     <h2>API</h2>
         <h3>Intro</h3>
-        <h3>Rest</h3>
-        <h3>Django API</h3>
+        rest soap web ...
         <h3>Propre API</h3>
     <h2>Migration Programmes vers api</h2>
         <h3>Géneralité</h3>        
@@ -311,18 +305,14 @@
         <h3>GcloudSDK</h3>
         <h3>Docker</h3>
         <h3>FireBase</h3>
-    <h2>Limites du projet</h2>
-
+    <h2>Synthese</h2>
     <h2>Future Auto Formation</h2>
-        <h3>TypeScript</h3>
-        <h3>Node JS</h3>
-        <h3>Next JS</h3>
+        <h3>JS</h3>
         <h3>React</h3>
-        <h3>Flask</h3>
+        <h3>CSS/Tailwind</h3>
     <h2>Recherche d'Alternance</h2>
     <h2>Formation Simplon</h2>
     <h2>Et vous ? </h2>
-    <p>Si vous voyez ceci c'est que peut être mon profil vous interesse , si c'est le cas , Génial !<br>
-        flashez le qr code en bas à droite pour me contacter</p>
+    <p>Si vous voyez ceci c'est que sans doute mon profil vous interesse , si c'est le cas , n'hesitez pas à me contacter!</p>
 </div>
 {% endblock %}

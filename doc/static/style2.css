@@ -2,16 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-/* 
-
-Ma chere, y est tu arrivée ? La ou tu le desirais.
-mon ame ourdit le retour .et je suis la !
-et nous sommes deux etres, la mais loin de las et de l'etre, de chaire et d'amour,
-de mots,de lettres , des jours ephemeres et des mois court a tes cotés  
-ma cherie mon amour
-
-TU  
- */
 .flexbox_row{
     display: flex;
     flex-direction: row;
@@ -34,8 +24,10 @@ a:visited{
 }
 ul{
     list-style: none;
+    transition: 1s;
 }
 body{
+    height: 1800px;
     margin: 0;
     padding: 0;
     background: url(../static/img/bg/star.jpg);
@@ -48,12 +40,32 @@ body{
     grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
     grid-template-columns: 1fr 6fr 1fr;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1rem;
-    color: rgba(255,255,255)
+    font-size: 1.3rem;
+    /*color: rgba(255,255,255)*/
+    color : rgba(233, 143, 221,0.9);
+}
+h1{
+    color: rgba(255,40,245,0.8);
+    
+    align-self: center;
+}
+h2{
+    color:rgba(100,25,100,0.7);
+    align-self: flex-start;
+}
+h3{
+    color: rgba(80,20,80);
+    align-self: center;
+}
+h4{
+    color: rgba(90,25,90,0.8);
+}
+p{
+    justify-content: flex-end;
 }
 .header{
-    /*background: linear-gradient(0deg,rgba(0,0,255,0.2) 0%,rgba(0,0,125,0.3) 75%,rgba(0,0,50,0.9) 100%);*/
-    background: linear-gradient(180deg,rgba(140,40,225,0.2) 0%,rgba(100,150,255,0.4) 100%);
+    background: linear-gradient(0deg,rgba(0,0,255,0.2) 0%,rgba(0,0,125,0.3) 75%,rgba(0,0,50,0.9) 100%);
+    /*background: linear-gradient(180deg,rgba(140,40,225,0.2) 0%,rgba(100,150,255,0.4) 100%);*/
     border: 1px solid rgba(70,140,200,0.3);
     grid-row: 1;
     grid-column: 1/10;
@@ -82,6 +94,11 @@ body{
     grid-row:2/8;
     grid-column: 1;
     padding-right: 40px;
+    z-index: 1;
+    /*:hover{
+        transform:translateX(100px);
+        transition: 0.3s;
+    }*/
 }
 .menu ul{
     display: flex;
@@ -97,6 +114,7 @@ body{
     background-color: rgba(50,140,250,0.1);
     grid-row: 2/8;
     grid-column: 8;
+    z-index: 1;
 }
 .footer{
     /*background-color: aquamarine;*/
@@ -115,7 +133,7 @@ body{
     grid-row: 10;
     grid-column: 1/12;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .content{
     background-color: rgba(140,125,175,0.5);
@@ -139,7 +157,7 @@ header:hover{
     border-radius: 10px;
 }
 a:hover{
-    color:aqua;
+    color:rgba(163,34,12,0.1);;
 }
 /*
 a:hover{
@@ -164,16 +182,14 @@ main{
 main li{
     list-style: none;
 }
+/*
 main div:hover{
     border-radius: 10px;
-}
+}*/
 div:hover{
-    color : rgba(233, 143, 221,0.9);
+    /*color : rgba(233, 143, 221,0.9);*/
+    color: white;
 }
-.menu:hover{
-    color: yellow;
-}
-
 .content:hover{
     color:rgba(14, 202, 202, 0.9);
 }
@@ -185,6 +201,7 @@ div:hover{
 input[type="submit"]:hover{
     border-color: rgba(182, 18, 182, 0.3);
 }
+
 .item{
     background: rgba(70,140,200,0.3);
     /*border: 3px solid rgba(6, 35, 97, 0.9);*/
@@ -192,7 +209,10 @@ input[type="submit"]:hover{
 }
 
 .item:hover{
-    background :rgba(163, 34, 12, 0.4);
+    background :rgba(163, 34, 12,1);
+    translate: translateX(100px);
+    transition: 1s;
+    transform: none;
     /*border:1px dashed rgba(163,34,12,0.8);*/
 }
 .title{
@@ -201,8 +221,8 @@ input[type="submit"]:hover{
 }
 .square{
     flex-grow: 1;
-    align-self:center;
-    justify-content: space-around;
+    align-self:space-evenly;
+    justify-content: center;
 }
 .square ul{
     align-self: center;
@@ -218,6 +238,7 @@ input[type="submit"]:hover{
 .doc_list:hover{
     color:rgba(163,34,12,0.8);
 }
+
 .banner{
     margin-bottom: 20px;
     width: 1250px;
@@ -227,4 +248,64 @@ input[type="submit"]:hover{
     background-size: contain;
     background-position: right;
     align-content: space-around;
+}
+
+.prf{
+    padding-top: 85px;
+    padding-left: 15px;
+    justify-content: flex-end;
+    height: 250px;
+    width: 200px;
+    align-content: space-around;
+}
+
+.bnextd{
+    display: flex;
+}
+.bnextd:hover{
+    /*border : 1px solid rgba(180, 30, 180, 0.3);*/
+    background-color:rgba(190, 20, 190, 0.3) ;
+}
+.bnext{
+    background-color: rgba(255,255,255,0);
+    }
+.doc{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.bprevd{
+    display: flex;
+}
+.bprevd:hover{
+    /*border : 1px solid rgba(180, 30, 180, 0.3);*/
+    background-color:rgba(190, 20, 190, 0.3) ;
+}
+.bprev{
+    background-color: rgba(255,255,255,0);
+    }
+.lkt{align-self: center;
+justify-content: flex-end;}
+.qrkt{align-self:center;}
+
+.f1{
+    display: inline-flex;
+    flex:1;
+    justify-content: space-between;
+}
+.f2{flex:1;}
+
+.ibf{
+    display: flex;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.links>*{
+    flex : 75px 75px;
 }

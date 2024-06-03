@@ -1,6 +1,6 @@
-import colorama
+from colorama import Fore
 
-#print(colorama.Fore.RED+"hello")
+#print(Fore.RED+"hello")
 
 
 def generateN3plusK(n=1,k=0,max=200):
@@ -12,12 +12,45 @@ def generateN3plusK(n=1,k=0,max=200):
         
     return res
 
+def is_pair(n):
+    return n%2==0
+
 maxi = 50
 N3p0 = generateN3plusK(3,0,maxi)
 N3p1 = generateN3plusK(3,1,maxi)
 N3p2 = generateN3plusK(3,2,maxi)
 #print(N3p1)
-
+""" {
+        id:
+            {
+                id:0,
+                color:red,
+        
+"""
+result = ""
+for i in range(maxi):
+    toPrint = []
+    # i 3i 3i+1 3i+2
+    toPrint.append(i)
+    toPrint.append(i%3)
+    toPrint.append(3*i)
+    toPrint.append(3*i+1)
+    toPrint.append(3*i+2)
+    
+    
+    
+    
+    
+    if is_pair(i):
+        print(Fore.GREEN)
+        print( f"{i}")
+        #print("green",i)
+    else:
+        print(Fore.RED + f"{i}")
+        toPrint+= Fore.RED + f"{i}"
+        #print("red",i)
+        
+print(toPrint)
 
 def tri_pair_impair(lst,test_value=1):
     res = []
@@ -60,12 +93,13 @@ def count_base(l=8,base=2):
         for i in range(base):
             res[k*i+i]= 
 """            
-            
+
+"""    
 my_test ="100001"
 base_test = 2
 x = (num_as_sum(my_test,base_test))
 print(f"{eval(x)} = {x} = {my_test}({base_test})")
-
+"""
 
 class Number :
     def __init__(self,val,base):
@@ -73,6 +107,8 @@ class Number :
         self.base = base
         self.sval = f"{self.val}"
         self.l = len(self.sval)
+        #pair
+        #rank
         
     def __str__(self):
         return f"{self.val}"

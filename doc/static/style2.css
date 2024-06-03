@@ -309,3 +309,9 @@ justify-content: flex-end;}
 .links>*{
     flex : 75px 75px;
 }
+menu ul{
+    display: none;
+}
+menu ul:hover{
+    display: block;
+}

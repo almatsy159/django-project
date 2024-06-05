@@ -10,7 +10,7 @@ services:
     name: mysite
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python3.10 -m gunicorn doc.asgi:application -k uvicorn.workers.UvicornWorker" 
+    startCommand: "python3.10 -m gunicorn MyOwnSpace.asgi:application -k uvicorn.workers.UvicornWorker" 
     envVars:
       - key: DATABASE_URL
         fromDatabase:

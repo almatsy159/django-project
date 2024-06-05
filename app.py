@@ -9,4 +9,4 @@ def create_app():
 
 def app(a,b):
     print(f"{a},{b}")
-    return f"hi => a:{a};b:{b}"
+    return bin(f"hi => a:{a};b:{b}")

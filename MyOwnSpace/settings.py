@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'lib.python3.10.site-packages',
     'rest_framework',
     "single.apps.SingleConfig",
     "doc.apps.DocConfig",

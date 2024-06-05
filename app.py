@@ -13,6 +13,9 @@ def app(a,b):
     return data
 
 """
+import doc.views as v
+
+default = "index"
 
 def app(environ, start_response):
     """Simplest possible application object"""
@@ -22,5 +25,10 @@ def app(environ, start_response):
         ('Content-type', 'text/plain'),
         ('Content-Length', str(len(data)))
     ]
+    print(environ,start_response)
+    default = v.index("./",{"vars":{"name":"gaetan"}})
+    print(default)
     start_response(status, response_headers)
-    return iter([data])
+    print(start_response)
+    #return iter([data])
+    return default

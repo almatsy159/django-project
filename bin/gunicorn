@@ -7,11 +7,13 @@ import sys
 from gunicorn.app.wsgiapp import run
 
 
+"""
 def app(env,strat_response):
     data = b"hi world!"
     strat_response("200 OK",[("Content-type","text/plain"),("Content-length",str(len(data)))])
     
     return iter([data])
+"""
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])    

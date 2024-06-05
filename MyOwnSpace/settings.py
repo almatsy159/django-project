@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 """
 Django settings for MyOwnSpace project.
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'MyOwnSpace.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -85,6 +86,8 @@ DATABASES = {
         'OPTIONS':{
     }}
 }
+"""
+DATABASES = {'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/MyOwnSpace',conn_max_age=600)}
 #"service":"api",
 #            "passfile":".pswd"
 

@@ -1,20 +1,20 @@
 databases:
-  - name: mysitedb
+  - name: MyOwnSpaceDB
     plan: free
-    databaseName: mysite
-    user: mysite
+    databaseName: MyOwnSpace
+    user: MyOwnSpace
 
 services:
   - type: web
     plan: free
-    name: mysite
+    name: MyOwnSpace
     runtime: python
     buildCommand: "./build.sh"
     startCommand: "python3 -m gunicorn MyOwnSpace.asgi:application -k uvicorn.workers.UvicornWorker" 
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysitedb
+          name: MyOwnSpaceDB
           property: connectionString
       - key: SECRET_KEY
         generateValue: true

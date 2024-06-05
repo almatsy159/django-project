@@ -7,5 +7,6 @@ def create_app():
     app = App()
     return app
 
-def app():
-    return "hi"
+def app(a,b):
+    print(f"{a},{b}")
+    return f"hi => a:{a};b:{b}"

@@ -13,6 +13,8 @@ def app(a,b):
     return data
 
 """
+# just a comment
+
 import doc.views as v
 
 default = "index"

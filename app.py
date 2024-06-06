@@ -19,8 +19,10 @@ import doc.views as v
 
 default = "index"
 
-def app(environ, start_response):
+def app(environ=None, start_response=None):
     """Simplest possible application object"""
+    if environ == None:
+        environ = {}
     data = b'Hello, World!\n'
     status = '200 OK'
     response_headers = [
@@ -29,8 +31,8 @@ def app(environ, start_response):
     ]
     print(environ,start_response)
     default = v.index("./",{"vars":{"name":"gaetan"}})
-    print(default)
+    default = default.encode("utf-8")
     start_response(status, response_headers)
     print(start_response)
     #return iter([data])
-    return default
+    return iter[default]

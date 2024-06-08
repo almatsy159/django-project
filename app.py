@@ -33,7 +33,7 @@ def app(environ, start_response):
     default = v.index("./",{"vars":{"name":"gaetan"}})
     default = default.encode("utf-8")
     
-    res = start_response(status, response_headers)
+    start_response(status, response_headers)
     print(res)
     #return iter([data])
     return iter[default]

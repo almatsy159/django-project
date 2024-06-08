@@ -1,4 +1,4 @@
-
+import os
 """
 class App:
     pass
@@ -32,7 +32,7 @@ def app(environ, start_response):
     default = v.index("./",{"vars":{"name":"gaetan"}})
     default = default.encode("utf-8")
     
-    start_response(status, response_headers)
+    os.environ["start_response"] = status, response_headers
     print(start_response)
     #return iter([data])
     return iter[default]

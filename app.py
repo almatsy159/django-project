@@ -19,11 +19,9 @@ import doc.views as v
 
 default = "index"
 
-def app(environ=None, start_response=None):
+def app(environ, start_response):
     """Simplest possible application object"""
     print(start_response,environ)
-    if environ == None:
-        environ = {}
     data = b'Hello, World!\n'
     status = '200 OK'
     response_headers = [
@@ -37,4 +35,4 @@ def app(environ=None, start_response=None):
     start_response(status, response_headers)
     print(start_response)
     #return iter([data])
-    return iter[default],start_response
+    return iter[default]

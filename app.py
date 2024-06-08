@@ -16,10 +16,11 @@ def app(a,b):
 # just a comment
 
 import doc.views as v
-
+print("in app.py")
 default = "index"
 
 def app(environ, start_response):
+    print("in app")
     """Simplest possible application object"""
     print(start_response,environ)
     data = b'Hello, World!\n'

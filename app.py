@@ -21,6 +21,7 @@ default = "index"
 
 def app(environ=None, start_response=None):
     """Simplest possible application object"""
+    print(start_response,environ)
     if environ == None:
         environ = {}
     data = b'Hello, World!\n'
@@ -29,9 +30,10 @@ def app(environ=None, start_response=None):
         ('Content-type', 'text/plain'),
         ('Content-Length', str(len(data)))
     ]
-    print(environ,start_response)
+    #print(environ,start_response)
     default = v.index("./",{"vars":{"name":"gaetan"}})
     default = default.encode("utf-8")
+    
     start_response(status, response_headers)
     print(start_response)
     #return iter([data])

@@ -1,0 +1,39 @@
+/*main{
+    --default-angle-grad : 90deg;
+    --intial-color-value : rgba(0,0,125,0.9);
+    --mid-color-value : rgba(0,0,80,0.75);
+    --mid-value : 75%;
+    --final-color-value :rgba(0,0,50,0);
+
+    --base-grad :linear-gradient(
+        var(--default-angle-grad),
+        var(--intial-color-value) 0%,
+        var(--mid-color-value) var(--mid-value),
+        var(--final-color-value) 100%);
+
+}
+div{
+    --default-angle-content-grad :0deg;
+    --initial-color-value-content: rgba(200,200,255,0.8);
+    --final-color-value-content: rgba(0,0,150,0);
+    --mid-color-value-content: rgba(75,75,150,0.2);
+    --mid-value-content:25%;
+
+    --base-content-grad: linear-gradient(
+        var(--default-angle-content-grad),
+        var(--initial-color-value-content) 0%,
+        var(--mid-color-value-content) var(--mid-value-content),
+        var(--final-color-value) 100%);
+
+}
+
+
+
+
+
+body{
+    background: var(--base-grad);
+}
+div{
+    background: var(--base-content-grad);
+}*/

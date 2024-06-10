@@ -1,0 +1,41 @@
+.card_and_list{
+    list-style: None;
+    --bs-navbar-padding-y: 0rem;
+}
+.header_div{
+    background-color: red;
+    min-height: 5%;
+    max-height: 10%;
+}
+.navbar{
+    --bs-navbar-padding-y:0rem;
+}
+.row{
+    --bs-gutter-x:0px;
+}
+.grad0{
+    background: rgba(0,0,125,1);
+    background: linear-gradient(180deg, rgba(200,200,255) 0%,rgba(125,125,200) 25%,rgba(0,0,125,1) 100%);
+}
+.grad1{
+    background: rgb(17,11,126);
+    background: linear-gradient(90deg, rgba(17,11,126,1) 0%, rgba(9,125,121,1) 75%, rgba(0,255,255,1) 100%);
+}
+.grad2{
+    background: rgb(17,11,126);
+    background: linear-gradient(180deg, rgba(17,11,126,1) 0%, rgba(125,0,121,1) 95%, rgba(150,0,150,1) 100%);
+}
+.grad3{
+    background: rgb(25,19,139);
+    background: linear-gradient(0deg, rgba(25,19,139,1) 0%, rgba(100,160,180,1) 95%, rgba(255,255,255,1) 100%);
+    color: black;
+}
+.grad4{
+    background: rgb(17,11,126);
+    background: linear-gradient(90deg, rgba(150,0,255,1) 0%,rgba(200,125,255) 25%,rgba(255,255,255) 100%);
+    color : black
+}
+.grad5{
+    background: rgb(25,19,139);
+    background: linear-gradient(-90deg, rgba(25,19,139,1) 0%, rgba(100,160,180,1) 95%, rgba(255,255,255,1) 100%);
+}

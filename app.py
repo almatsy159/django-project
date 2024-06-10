@@ -35,4 +35,5 @@ def app(environ,start_response):
     start_response(status, response_headers)
     #print(res)
     #return iter([data])
-    return iter[default]
+    #return iter[default]
+    return start_response

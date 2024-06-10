@@ -14,6 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MyOwnSpace.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application,root="doc/static/html/")
+application = WhiteNoise(application)
 print(application)
 #app = application

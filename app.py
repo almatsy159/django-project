@@ -19,7 +19,7 @@ import doc.views as v
 print("in app.py")
 default = "index"
 
-def app(environ):
+def app(environ,start_response):
     print("in app")
     """Simplest possible application object"""
     #print(start_response,environ)
@@ -32,8 +32,7 @@ def app(environ):
     #print(environ,start_response)
     default = v.index("./",{"vars":{"name":"gaetan"}})
     default = default.encode("utf-8")
-    
-    #start_response(status, response_headers)
+    start_response(status, response_headers)
     #print(res)
     #return iter([data])
     return iter[default]

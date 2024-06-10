@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'MyOwnSpace.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -86,11 +86,12 @@ DATABASES = {
         'OPTIONS':{
     }}
 }
+
 """
 DATABASES = {'default': dj_database_url.config(default='postgres://mysite:GaVhOSk5ElvgOrLAesJYXXkRU0pkHJB2@dpg-cpg82e7109ks73ca5d90-a.oregon-postgres.render.com/mysite_90d6',conn_max_age=600)}
 #"service":"api",
 #            "passfile":".pswd"
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 

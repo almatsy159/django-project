@@ -19,7 +19,7 @@ import doc.views as v
 print("in app.py")
 default = "index"
 
-def app(environ,start_response):
+def app(start_response,environ):
     print("in app")
     """Simplest possible application object"""
     #print(start_response,environ)

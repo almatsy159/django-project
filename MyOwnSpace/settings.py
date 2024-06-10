@@ -86,7 +86,7 @@ DATABASES = {
     }}
 }
 """
-DATABASES = {'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/MyOwnSpace',conn_max_age=600)}
+DATABASES = {'default': dj_database_url.config(default='postgres://mysite:GaVhOSk5ElvgOrLAesJYXXkRU0pkHJB2@dpg-cpg82e7109ks73ca5d90-a/mysite_90d6/MyOwnSpace',conn_max_age=600)}
 #"service":"api",
 #            "passfile":".pswd"
 

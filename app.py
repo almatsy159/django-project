@@ -27,6 +27,7 @@ def app(start_response,environ):
     status = '200 OK'
     response_headers = [
         ('Content-type', 'text/html'),
+        ('Content-type', 'text/css'),
         ('X-Content-Type-Options',"nosniff"),
         ('Content-Length', str(len(data)))
     ]

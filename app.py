@@ -26,7 +26,8 @@ def app(start_response,environ):
     data = b'Hello, World!\n'
     status = '200 OK'
     response_headers = [
-        ('Content-type', 'text/html+css'),
+        ('Content-type', 'text/html'),
+        ('X-Content-Type-Options',"nosniff"),
         ('Content-Length', str(len(data)))
     ]
     #print(environ,start_response)

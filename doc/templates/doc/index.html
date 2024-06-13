@@ -5,7 +5,7 @@
 {% block header %}
     
         <div class="square header_item">
-            <img class="prf" src="/static/img/perso/miamor.jpg" width="250" height="200">
+            <img class="prf" src="{% static 'img/perso/miamor.jpg' %}" width="250" height="200">
             <!--
             <summary class="card-title">Navigation Interne</summary>
             <details class="card-body"> -->
@@ -24,14 +24,14 @@
         <div class="links header_item">
             <!--<img class="item" src="/static/img/perso/contact.png" width='125',height='125'/>-->
             <!--<summary class="card-title">Navigation Externe</summary>
-            <details class="card-body">--><ul class="linkbox"><h2>Liens</h2>
+            <details class="card-body">--><ul class="linkbox  lblock"><h2>Liens</h2>
                 <!--<li class="item"><a href="/single">Single</a></li>-->
                 <!--<li class="item"><a href="/polls">polls #lien avec description</a></li>-->
                 <!--<li class="item"><a class="lkt" href="https://linktr.ee/glecomte159" target="_blank"><img src="/static/img/logo/lkt.png" width="75" height="75"></a></li>-->
-                <li class="item"><a class="lkt" href="https://linktr.ee/glecomte159" target="_blank"><img src=" {% static 'img/logo/lkt.png' %}" width="75" height="75"></a></li>
-                <li class="item"><a href="https://www.linkedin.com/in/glecomte159/" target="_blank"><img src="{% static 'img/logo/lkd.png' %}" width="75" height="75"></a></li>
-                <li class="item"><a href="https://github.com/almatsy159" target="_blank"><img src="{% static 'img/logo/gh.png' %}" width="75" height="75"></a></li>
-                <li class="item"><a href="mailto:gaetan.lecomte159@gmail.com"><img src="{% static 'img/logo/gm.png' %}" width="75" height="75"></a></li>
+                <li class="item link beg"><a class="lkt" href="https://linktr.ee/glecomte159" target="_blank"><img src=" {% static 'img/logo/lkt.png' %}" width="75" height="75"></a></li>
+                <li class="item link end"><a href="https://www.linkedin.com/in/glecomte159/" target="_blank"><img src="{% static 'img/logo/lkd.png' %}" width="75" height="75"></a></li>
+                <li class="item link beg"><a href="https://github.com/almatsy159" target="_blank"><img src="{% static 'img/logo/gh.png' %}" width="75" height="75"></a></li>
+                <li class="item link end"><a href="mailto:gaetan.lecomte159@gmail.com"><img src="{% static 'img/logo/gm.png' %}" width="75" height="75"></a></li>
                 </ul>
             
         </div>

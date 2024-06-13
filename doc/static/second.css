@@ -14,3 +14,35 @@
 .triangle{
     width:50px;
 }
+.test_btn{
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    rotate: 45deg;
+    border-radius: 25%;
+}
+.test_btn1{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    margin-top: -125px;
+    rotate: 45deg;
+}
+.test_btn2{
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    
+    border-radius: 25%;
+    margin-top: -115px;
+    rotate: 45deg;
+}
+.test_btn3{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 25%;
+    margin-top:-110px;
+    rotate: 45deg;
+}

@@ -20,10 +20,16 @@ three path possible:
 
 and finnaly the main page of the website at /doc that can be found in files
 
-    you are there in "my own space"
+you are there in "my own space"
 
-    from /doc/ :
-      #links in url of doc
-      - details
-      - <doc_id>
+the form create a documment you can access from api
+
+from /doc/ :
+#links in url of doc
+  - details
+  - others
+  - second
+  - <doc_id>
       ...
+
+and you can contact me if you wish =)

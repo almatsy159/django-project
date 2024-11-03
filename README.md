@@ -1,6 +1,6 @@
 # Portfolio django
 
-this project's objective is to explore possibilities of the django framework. 
+this project's objective is to explore possibilities of the django framework , work on few graphics render through css by testing graphics charts and try a solutions of deployment.
 
 # run
 pull this project 
